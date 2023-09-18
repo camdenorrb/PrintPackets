@@ -1,2 +1,1 @@
-rootProject.name = "JavaGradlePluginTemplate"
-
+rootProject.name = "PrintPackets"

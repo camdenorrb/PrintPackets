@@ -1,4 +1,4 @@
-package dev.twelveoclock.plugintemplate.module.base;
+package dev.twelveoclock.printpackets.module.base;
 
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;

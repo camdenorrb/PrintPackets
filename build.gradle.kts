@@ -21,6 +21,7 @@ repositories {
 dependencies {
 
     compileOnly("org.spigotmc:spigot-api:1.20.1-R0.1-SNAPSHOT")
+    compileOnly("it.unimi.dsi:fastutil:8.5.9")
 
     implementation("org.jetbrains:annotations:24.0.1")
 
@@ -39,15 +40,10 @@ tasks {
         useJUnitPlatform()
     }
 
-    // TODO: Change the second parameter to your plugin's package + the suffix.
-    //       For example, if your main package is "me.example.catplugin",
-    //       change the second parameter for the first relocate to:
-    //       "me.example.catplugin.libs.com.fasterxml".
-    //       Then, follow this pattern to the other relocate calls.
     shadowJar {
-        relocate("com.fasterxml", "dev.twelveoclock.plugintemplate.libs.com.fasterxml")
-        relocate("org.jetbrains", "dev.twelveoclock.plugintemplate.libs.org.jetbrains")
-        relocate("org.intellij", "dev.twelveoclock.plugintemplate.libs.org.intellij")
+        relocate("com.fasterxml", "dev.twelveoclock.printpackets.libs.com.fasterxml")
+        relocate("org.jetbrains", "dev.twelveoclock.printpackets.libs.org.jetbrains")
+        relocate("org.intellij", "dev.twelveoclock.printpackets.libs.org.intellij")
     }
 }
 

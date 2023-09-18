@@ -1,4 +1,4 @@
-package dev.twelveoclock.plugintemplate.utils;
+package dev.twelveoclock.printpackets.utils;
 
 import org.bukkit.ChatColor;
 
