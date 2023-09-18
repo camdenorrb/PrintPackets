@@ -12,8 +12,12 @@ import java.util.Objects;
 
 
 // TODO: Store this information in memory and then can be retrieved via commands
+// TODO: Use to help generate packet enum in minecraftPackets
+// TODO: Be able to provide a minecraft-server.jar to pull from
 @SuppressWarnings({"rawtypes", "unchecked"})
 public final class PacketModule extends PluginModule {
+
+	private static final String CLASS_TO_DEBUG = "PacketPlayOutViewCentre";
 
 	public PacketModule(final JavaPlugin plugin) {
 		super(plugin);
@@ -34,7 +38,7 @@ public final class PacketModule extends PluginModule {
 				final Map<?, ?> flows = getFlowsFromConnectionProtocol(connectionProtocol);
 
 				Objects.requireNonNull(flows).forEach((key, val) -> {
-					System.out.println("Direction: " + key);
+					System.out.println(connectionProtocol + " Direction: " + key);
 					printPacketSet(val);
 				});
 			}
@@ -92,7 +96,7 @@ public final class PacketModule extends PluginModule {
 	private void printPacketSet(final Object packetSet) {
 
 		// Get class to id
-		final Object2IntMap classToId = getClassToIdFromPacketSet(packetSet);
+		final Object2IntMap<Object> classToId = getClassToIdFromPacketSet(packetSet);
 		final Map<Object, Integer> classToIdJavaMap = new HashMap<>(Objects.requireNonNull(classToId));
 
 		// Print class to id
@@ -103,6 +107,11 @@ public final class PacketModule extends PluginModule {
 		System.out.println();
 	}
 
+	private void printInfoAboutPacket(Class<Object> packet) {
+		System.out.println("Packet: " + packet.getName());
+
+
+	}
 
 
 }
