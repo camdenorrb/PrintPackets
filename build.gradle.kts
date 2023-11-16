@@ -26,7 +26,7 @@ dependencies {
     implementation("org.jetbrains:annotations:24.1.0")
 
     // Jackson
-    implementation("com.fasterxml.jackson.core:jackson-core:2.15.3")
+    implementation("com.fasterxml.jackson.core:jackson-core:2.16.0")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-toml:2.15.3")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.1")
