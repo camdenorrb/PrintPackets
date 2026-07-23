@@ -21,7 +21,7 @@ repositories {
 dependencies {
 
     compileOnly("org.spigotmc:spigot-api:26.2-R0.1-SNAPSHOT")
-    compileOnly("it.unimi.dsi:fastutil:8.5.18")
+    compileOnly("it.unimi.dsi:fastutil:8.5.19")
 
     implementation("org.jetbrains:annotations:26.1.0")
 
